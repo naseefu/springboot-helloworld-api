@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 // @RestController =  @Controller + @ResponseBody
 public class HelloWorldController {
 
-    // eg: /users/{userId}
+    // eg: /blog/{blog-name}
     @GetMapping("/hello/{name}/world")
     //@RequestMapping(method = RequestMethod.GET, path = "/hello/{name}/world") => we can also use this instead of getmapping
     public HelloWorldReponse helloWithPathVariable(@PathVariable String name){
