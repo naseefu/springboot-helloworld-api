@@ -1,3 +1,5 @@
 spring:
   application:
     name: HelloWorldAPI
+server:
+  port: 8081
