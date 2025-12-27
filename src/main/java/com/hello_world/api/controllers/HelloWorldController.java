@@ -1,5 +1,6 @@
 package com.hello_world.api.controllers;
 
+import com.hello_world.api.HelloWorldReponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,13 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWorldController {
 
     @GetMapping("/hello")
-    public String hello(){
-        return "Hello World!";
+    public HelloWorldReponse hello(){
+        return new HelloWorldReponse("Hello World!");
     }
 
     @PostMapping("/hello")
-    public String helloPost(@RequestBody String name){
-        return "Hello "+ name+"!";
+    public HelloWorldReponse helloPost(@RequestBody String name){
+        return new HelloWorldReponse("Hello "+ name+"!");
     }
 
 }
